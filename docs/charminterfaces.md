@@ -1,5 +1,6 @@
 # Writing charm interfaces
 
+<<<<<<< HEAD
 For Charms to communicate with one another charms utilise what are called Interfaces.
 
 Interfaces are the spin which charms use to enable communication between relationships, if you read the [Charm Writing Guide](./charmsindetail.md#what%20are%20interfaces) then you will have seen some illustrations on how charms communicate with each other.
@@ -15,3 +16,6 @@ As a case study, we can look at the MySQLClient charm. This charm uses a single 
  
 
  
+=======
+TODO
+>>>>>>> Review changes 1/2
