@@ -4,12 +4,13 @@
 
 In the top level of your charm folder, create a new folder called test and add a file called test_requiments.txt.
 
-Add the following to your test_requirements.txt:
+Add the following to your test_requirements.txt, if this file does exist, create it under the test directory:
 
 ```
-# TODO: Update
 pyyaml
 ```
+
+It is abvisable to create yourself a virtualenv to run these tests, you can read setting up a virtualenv [here](https://virtualenvwrapper.readthedocs.io/en/latest/).
 
 ## Creating tests
 
@@ -52,10 +53,29 @@ from ops.testing import Harness
 
 ```
 
-## Handle interface imports (External Dependencies)
+Now that you have the harness imported, you can go ahead and create our test class:
 
-If you use external dependencies such as interface you will have to make sure they are imported to the `lib` directory.
+```
+class TestYourCharmName(unittest.TestCase):
 
-To do this run a symbolic link, similar to this:
+```
 
-`ln -s ../mod/interface-mysql lib/interface_mysql` ensure the folder is valid for Python, and contains a `__init__.py` file.
+
+One of the methods of testing that the operator offers is to test the leader, we can do that by using the `set_leader` Operator Framework method:
+
+```
+    def test_set_leader(self, *args):
+        harness = Harness(OSMUIK8sCharm)
+
+        harness.set_leader(False)
+        harness.begin()
+        self.assertFalse(harness.charm.model.unit.is_leader())
+```
+
+Once you have added a test method, go ahead and run the tests, making sure your virtualenv is enabled you can run something like:
+
+```
+(osm-ui-charm) % python -m unittest test/test_charm.py
+```
+
+## Adding more test methods
