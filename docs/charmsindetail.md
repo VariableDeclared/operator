@@ -100,7 +100,7 @@ ln -s ../mod/operator/ops lib/ops
 
 ### Add interface dependences
 
-To begin a new charm we should take note of an Interfaces that might be needed, the operator framework uses Interfaces as dependencies.
+To begin a new charm we should take a note of any interfaces that might be needed, the operator framework uses interfaces as dependencies.
 
 These dependencies are pulled in as git submodules, and should be added to the `.gitmodules` file, an example file looks like this:
 
