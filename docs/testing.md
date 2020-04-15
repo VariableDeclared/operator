@@ -10,11 +10,7 @@ Add the following to your test_requirements.txt, if this file does exist, create
 pyyaml
 ```
 
-<<<<<<< HEAD
 It is abvisable to create yourself a virtualenv to run these tests, you can read setting up a virtualenv [here](https://virtualenvwrapper.readthedocs.io/en/latest/).
-=======
-It is abvisable to create yourself a virtualenv to run these tests, you can read setting up a virtualenv [here](https://virtualenvwrapper.readthedocs.io/en/latest/)
->>>>>>> Current progress with testing charms
 
 ## Creating tests
 
@@ -61,7 +57,6 @@ Now that you have the harness imported, you can go ahead and create our test cla
 
 ```
 class TestYourCharmName(unittest.TestCase):
-<<<<<<< HEAD
 
 ```
 
@@ -84,21 +79,3 @@ Once you have added a test method, go ahead and run the tests, making sure your 
 ```
 
 ## Adding more test methods
-=======
-
-```
-
-
-One of the methods of testing that the operator offers is to test the leader, we can do that by using the `set_leader` Operator Framework method:
-
-```
-    def test_set_leader(self, *args):
-        harness = Harness(OSMUIK8sCharm)
-
-        harness.set_leader(False)
-        harness.begin()
-        self.assertFalse(harness.charm.model.unit.is_leader())
-```
-
-Once you have added a test method, go ahead and run the tests, for this it might be a
->>>>>>> Current progress with testing charms
