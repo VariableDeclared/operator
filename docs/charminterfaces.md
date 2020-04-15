@@ -12,3 +12,15 @@ There are two components to Charm Interfaces:
 Interfaces take a structure much like charms themselves, but taking on different roles. In the case of interfaces they are 'facilitators'. Making sure that the communication between two charms takes an expected (maybe standard) form.
 
 As a case study, we can look at the MySQLClient charm. This charm uses a single file called `interface_mysql.py` which contains both the
+<<<<<<< HEAD
+=======
+
+
+# Importing dependencies into the charm
+
+When adding interfaces you will have to make sure they are imported to the `lib` directory.
+
+To do this run a symbolic link, similar to this:
+
+`ln -s ../mod/interface-mysql lib/interface_mysql` ensure the folder is valid for Python, and contains a `__init__.py` file.
+>>>>>>> Current progress with testing charms

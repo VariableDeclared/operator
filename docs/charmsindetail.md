@@ -300,7 +300,9 @@ Please find the testing guide [here](./testing.md)
 
 # Useful links
 
-TODO
+
+[Juju](https://juju.is/docs)
+[]
 
 ## Example Charms
 
